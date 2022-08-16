@@ -1,13 +1,15 @@
 #include "Weapon.h"
 #include "HumanB.h"
 #include "HumanA.h"
+#include <stdlib.h>
 
 int main()
 {
-	Weapon	club = Weapon("club");
+	Weapon	club = Weapon("qwer");
 
-	HumanA	bob("Bob", club);
-	bob.attack();
-	club.setType("bicak");
-	bob.attack();
+	HumanB jim("Jim");
+	jim.setWeapon(club);
+	jim.attack();
+	club.setType("canodis");
+	jim.attack();
 }

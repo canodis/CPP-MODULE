@@ -1,7 +1,7 @@
 NAME = weapon
 SRCS = *.cpp
-CMP = c++
-FLAGS = -Wall -Wextra -Werror
+CMP = c++ -g
+FLAGS = #-Wall -Wextra -Werror
 
 all:$(NAME)
 
