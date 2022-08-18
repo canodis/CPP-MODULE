@@ -8,8 +8,8 @@
             "type": "lldb",
             "request": "launch",
             "name": "Debug",
-            "program": "/Users/rtosun/Desktop/CPP-MODULE/module01/ex00/zombie",
-            "args": [],
+            "program": "/Users/rtosun/Desktop/CPP-MODULE/module01/ex06/harl",
+            "args": ["WARNING"],
             "cwd": "${workspaceFolder}"
         }
     ]
