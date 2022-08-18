@@ -3,13 +3,23 @@
 #include "HumanA.h"
 #include <stdlib.h>
 
-int main()
+int main(void)
 {
-	Weapon	club = Weapon("qwer");
-
-	HumanB jim("Jim");
-	jim.setWeapon(club);
-	jim.attack();
-	club.setType("canodis");
-	jim.attack();
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanA bob("Bob", club);
+		bob.attack();
+		club.setType("knife");
+		bob.attack();
+	}
+	{
+		std::cout << std::endl;
+		Weapon club = Weapon("crude spiked club");
+		HumanB jim("Jim");
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("knife");
+		jim.attack();
+	}
+	return 0;
 }
