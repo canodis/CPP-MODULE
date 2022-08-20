@@ -1,4 +1,4 @@
-NAME = Orthodox2
+NAME = Orthodox3
 SRCS = *.cpp
 CMP = c++
 FLAGS = -Wall -Wextra -Werror

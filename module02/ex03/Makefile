@@ -1,4 +1,4 @@
-NAME = Orthodox2
+NAME = point
 SRCS = *.cpp
 CMP = c++
 FLAGS = -Wall -Wextra -Werror
