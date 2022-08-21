@@ -1,6 +1,6 @@
 #include "Fixed.h"
 
-#pragma region Constructors
+// ---- Constructors ---- //
 Fixed::Fixed() {
 	this->fixedPointValue = 0;
 	std::cout << "Default constructor called" << std::endl;
@@ -20,15 +20,14 @@ Fixed::Fixed(const Fixed &copy) {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = copy;
 }
-#pragma endregion
 
-#pragma region Destructors
+// ---- Destructors ---- //
+
 Fixed::~Fixed() {
 	std::cout << "Destructor called" << std::endl;
 }
-#pragma endregion
 
-#pragma region Operators
+// ---- Operators ---- //
 
 Fixed &Fixed::operator=(const Fixed &src) {
 	std::cout << "Copy assignment operator called" << std::endl;
@@ -64,9 +63,8 @@ std::ostream	&operator<<(std::ostream &os, const Fixed &f) {
 	os << f.toFloat();
 	return os;
 }
-#pragma endregion
 
-#pragma region Arithmetic
+// ---- Arithmetic ---- //
 
 float Fixed::operator+(Fixed src) {
 	return (this->toFloat() + src.toFloat());
@@ -106,9 +104,7 @@ Fixed	Fixed::operator--(int) {
 	return (tmp);
 }
 
-#pragma endregion
-
-#pragma region Functions
+// ---- Functions ---- //
 
 int	Fixed::getRawBits(void) const {
 	std::cout << "getRawBits member function called" << std::endl;
@@ -133,5 +129,3 @@ Fixed	Fixed::max(Fixed a, Fixed b) {
 	else
 		return (b);
 }
-
-#pragma endregion

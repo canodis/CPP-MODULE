@@ -15,7 +15,10 @@ public:
 	~Point();
 	const Fixed	getX() const;
 	const Fixed	getY() const;
-	Point	&Point::operator=(const Point &src);
+	Point	&operator=(const Point &src);
 };
+
+bool	bsp(Point const a, Point const b, Point const c, Point const point);
+
 
 #endif

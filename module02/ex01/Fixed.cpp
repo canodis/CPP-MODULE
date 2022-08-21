@@ -18,7 +18,7 @@ Fixed::Fixed(const float fnumber) {
 Fixed::Fixed(const Fixed &copy) {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = copy;
-	}
+}
 
 Fixed &Fixed::operator=(const Fixed &src) {
 	std::cout << "Copy assignment operator called" << std::endl;

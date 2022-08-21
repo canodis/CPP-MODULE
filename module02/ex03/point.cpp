@@ -1,6 +1,5 @@
 #include "point.h"
 
-#pragma region Constructors
 
 Point::Point(): x(0), y(0) {
 }
@@ -12,15 +11,15 @@ Point::~Point() {
 }
 
 Point::Point(const Point &cpy): x(cpy.getX()), y(cpy.getY()) {
-	//*this = cpy;
+	std::cout << "cpy" << std::endl;
 }
 
 Point	&Point::operator=(const Point &src)
 {
-	return (*this);
+	std::cout << "=operator" << std::endl;
+	return *this;
 }
 
-#pragma endregion
 
 Fixed	const Point::getX() const {
 	return (this->x);

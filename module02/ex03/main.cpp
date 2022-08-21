@@ -1,15 +1,15 @@
 #include "Fixed.h"
+#include "point.h"
 
 int main( void )
 {
-	Fixed a;
-	Fixed const b(Fixed(5.05f) * Fixed(2));
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << Fixed::max(a, b) << std::endl;
-	return 0;
+	const Point a(1.1f,1.1f);
+	const Point b(5, 0);
+	const Point c(0, 5);
+	const Point p(1, 1);
+
+	if (bsp(a,b,c,p))
+		std::cout << "OK\n";
+	else
+		std::cout << "KO\n";
 }
