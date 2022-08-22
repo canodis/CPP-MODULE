@@ -12,7 +12,7 @@ Fixed::~Fixed() {
 Fixed::Fixed(const Fixed &copy) {
 	std::cout << "Copy constructor called" << std::endl;
 	this->fixedPointValue = copy.getRawBits();
-	}
+}
 
 Fixed &Fixed::operator=(const Fixed &src) {
 	std::cout << "Copy assignment operator called" << std::endl;
