@@ -5,12 +5,10 @@
 
 class ScavTrap : public ClapTrap
 {
-private:
-
 public:
-	ScavTrap(std::string _name, int _hp = 100, int _energy = 50, int _damage = 20);
+	ScavTrap(std::string _name, int _hp = 100, int _energy = 50, int _damage = 1000);
 	~ScavTrap();
 	ScavTrap(ScavTrap const &cpy);
-	//void guardGate();
+	void guardGate();
 };
 #endif
