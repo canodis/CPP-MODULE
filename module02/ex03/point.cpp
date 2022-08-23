@@ -1,6 +1,5 @@
 #include "point.h"
 
-
 Point::Point(): x(0), y(0) {
 }
 
@@ -11,12 +10,12 @@ Point::~Point() {
 }
 
 Point::Point(const Point &cpy): x(cpy.getX()), y(cpy.getY()) {
-	std::cout << "cpy" << std::endl;
+	//std::cout << "cpy" << std::endl;
 }
 
-Point	&Point::operator=(const Point &src)
-{
-	std::cout << "=operator" << std::endl;
+Point	&Point::operator=(const Point &src) {
+	if (this == &src)
+		return *this;
 	return *this;
 }
 

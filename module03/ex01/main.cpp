@@ -3,7 +3,11 @@
 int	main()
 {
 	ScavTrap	a("can");
-	std::cout << a.GetInfo();
-	a.takeDamage(200);
-	std::cout << "selam";
+	ScavTrap	b(a);
+	std::cout << a;
+	a.takeDamage(90);
+	a.beRepaired(40);
+	a.attack("erdoggy");
+	a.guardGate();
+	a.takeDamage(30);
 }

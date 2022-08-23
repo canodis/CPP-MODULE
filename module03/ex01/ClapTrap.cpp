@@ -16,9 +16,12 @@ ClapTrap::~ClapTrap() {
 ClapTrap::ClapTrap(const ClapTrap &cpy) {
 	std::cout << "Base Copy called" << std::endl;
 	this->Name = cpy.Name;
+	this->AttackDamage = cpy.AttackDamage;
+	this->EnergyPoints = cpy.EnergyPoints;
+	this->HitPoints = cpy.EnergyPoints;
 }
 
-ClapTrap &ClapTrap::operator=(const ClapTrap src) {
+ClapTrap &ClapTrap::operator=(const ClapTrap &src) {
 	std::cout << "Base Operator= called" << std::endl;
 	this->Name = src.Name;
 	return (*this);
@@ -34,18 +37,18 @@ void	ClapTrap::attack(const std::string &target) {
 		std::cout << "Not enough energy !" << std::endl;
 	else
 	{
-	std::cout << "ClapTrap "+ this->Name + " attacks "+ target + ", causing " 
-	+ std::to_string(this->AttackDamage) + " points of damage!" << std::endl;
+	std::cout << YEL << "ClapTrap "+ this->Name + " attacks "+ target + ", causing " 
+	+ std::to_string(this->AttackDamage) + " points of damage!" << NORM << std::endl;
 	this->EnergyPoints--;
 	}
 }
 
 void	ClapTrap::takeDamage(unsigned int d) {
 	this->HitPoints -= d;
-	std::cout << this->Name + " takes " + std::to_string(d) + " damage and hp is : " + std::to_string(this->HitPoints) << std::endl;
+	std::cout << MAG << this->Name + " takes " + std::to_string(d) + " damage and hp is : " + std::to_string(this->HitPoints) << NORM << std::endl;
 	if (this->HitPoints <= 0)
 	{
-		std::cout << this->Name << " is Dead !" << std::endl;
+		std::cout << RED << this->Name << " is Dead !" << std::endl;
 		std::cout << *this;
 		exit(0);
 	}
@@ -58,7 +61,7 @@ void	ClapTrap::beRepaired(unsigned int hp) {
 	{
 		this->HitPoints += hp;
 		this->EnergyPoints--;
-		std::cout << this->Name + "\'s hit points increased new hp : " + std::to_string(this->HitPoints) << std::endl;
+		std::cout << GRN << this->Name + "\'s hit points increased new hp : " + std::to_string(this->HitPoints) << NORM << std::endl;
 	}
 }
 

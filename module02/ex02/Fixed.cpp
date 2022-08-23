@@ -59,7 +59,7 @@ bool	Fixed::operator!=(Fixed src) {
 	return (this->toFloat() != src.toFloat());
 }
 
-std::ostream	&operator<<(std::ostream &os, const Fixed &f) {
+std::ostream	&operator<<(std::ostream &os, const Fixed f) {
 	os << f.toFloat();
 	return os;
 }

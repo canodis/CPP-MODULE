@@ -5,9 +5,18 @@ ScavTrap::ScavTrap(std::string _name, int _hp, int _energy, int _damage): ClapTr
 }
 
 ScavTrap::~ScavTrap() {
-	std::cout << "Destructer called" << std::endl;
+	std::cout << "Derived Destructer called" << std::endl;
+}
+
+ScavTrap::ScavTrap(ScavTrap const &cpy): ClapTrap(cpy) {
+	std::cout << "Derived Copy constructor called" << std::endl;
 }
 
 void 	ScavTrap::guardGate() {
-	std::cout << "ScavTrap is now in Gate keeper mode." << std::endl;
+	std::cout << BLUE << "ScavTrap " + this->Name + " is now in Gate keeper mode." << NORM << std::endl;
 }
+
+// ScavTrap	&ScavTrap::operator=(const ScavTrap &src) {
+// 	std::cout << "Derived Operator= called" << std::endl;
+
+// }
