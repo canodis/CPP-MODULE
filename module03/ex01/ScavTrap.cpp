@@ -16,7 +16,10 @@ void 	ScavTrap::guardGate() {
 	std::cout << BLUE << "ScavTrap " + this->Name + " is now in Gate keeper mode." << NORM << std::endl;
 }
 
-// ScavTrap	&ScavTrap::operator=(const ScavTrap &src) {
-// 	std::cout << "Derived Operator= called" << std::endl;
-
-// }
+ScavTrap	&ScavTrap::operator=(const ScavTrap &src) {
+	std::cout << "Derived Operator= called" << std::endl;
+	this->Name = src.Name;
+	this->AttackDamage = src.AttackDamage;
+	this->EnergyPoints = src.EnergyPoints;
+	this->HitPoints = src.HitPoints;
+}
