@@ -20,7 +20,8 @@ protected:
 	int	EnergyPoints;
 	int	AttackDamage;
 public:
-	ClapTrap(std::string _name, int _hp = 10, int _energy = 10, int _damage = 0);
+	ClapTrap();
+	ClapTrap(std::string _name, int _hp, int _energy, int _damage);
 	ClapTrap(const ClapTrap &cpy);
 	ClapTrap &operator=(const ClapTrap &src);
 	~ClapTrap();

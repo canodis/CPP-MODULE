@@ -2,7 +2,7 @@
 
 int	main()
 {
-	ScavTrap	a("can");
+	ScavTrap	a;
 	ScavTrap	b(a);
 	std::cout << a;
 	a.takeDamage(90);

@@ -129,3 +129,10 @@ Fixed	Fixed::max(Fixed a, Fixed b) {
 	else
 		return (b);
 }
+
+Fixed	Fixed::min(Fixed a, Fixed b) {
+	if (a.toFloat() < b.toFloat())
+		return (a);
+	else
+		return (b);
+}

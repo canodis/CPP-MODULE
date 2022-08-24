@@ -3,12 +3,14 @@
 
 int	main()
 {
-	FragTrap	ft("can");
-	ScavTrap	st("erdog");
+	FragTrap	ft;
+	ScavTrap	st;
+	ClapTrap	ct;
 
 	ft.attack("Zombie");
 	ft.highFivesGuys();
 	ft.takeDamage(25);
+	ct.attack("omg");
 	ft.beRepaired(22);
 	ft.highFivesGuys();
 	st.attack("can");

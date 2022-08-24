@@ -1,8 +1,12 @@
 #include "ClapTrap.h"
 
 // ---- Constructors ---- // 
+ClapTrap::ClapTrap(): Name("Kurisu Makise"),  HitPoints(10), EnergyPoints(10), AttackDamage(0) {
+	std::cout << RED << "😆​ ClapTrap\'s Default Constructor called 😆" << NORM << std::endl;
+}
+
 ClapTrap::ClapTrap(std::string _name, int _hp, int _energy, int _damage) {
-	std::cout << "Multiple Constructor called" << std::endl;
+	std::cout << RED << "😆​ ClapTrap\'s Multiple Constructor called 😆" << NORM << std::endl;
 	this->Name = _name;
 	this->HitPoints = _hp;
 	this->EnergyPoints = _energy;
@@ -10,11 +14,21 @@ ClapTrap::ClapTrap(std::string _name, int _hp, int _energy, int _damage) {
 }
 
 ClapTrap::~ClapTrap() {
-	std::cout << "Desstructor called" << std::endl;
+	std::cout << RED << "💀 ClapTrap\'s Destructor called 💀" << NORM << std::endl;
 }
 
-ClapTrap &ClapTrap::operator=(const ClapTrap src) {
-	std::cout << "Operator= called" << std::endl;
+ClapTrap::ClapTrap(const ClapTrap &cpy) {
+	std::cout << RED << "ClapTrap\'s Copy Constructor called" << NORM << std::endl;
+	this->Name = cpy.Name;
+	this->AttackDamage = cpy.AttackDamage;
+	this->EnergyPoints = cpy.EnergyPoints;
+	this->HitPoints = cpy.EnergyPoints;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &src) {
+	std::cout << RED << "ClapTrap\'s Operator= called" << NORM << std::endl;
+	if (this == &src)
+		return (*this);
 	this->Name = src.Name;
 	this->AttackDamage = src.AttackDamage;
 	this->EnergyPoints = src.EnergyPoints;
@@ -32,7 +46,7 @@ void	ClapTrap::attack(const std::string &target) {
 		std::cout << "Not enough energy !" << std::endl;
 	else
 	{
-	std::cout << "ClapTrap "+ this->Name + " attacks "+ target + " ,causing " 
+	std::cout << "ClapTrap "+ this->Name + " attacks "+ target + ", causing " 
 	+ std::to_string(this->AttackDamage) + " points of damage!" << std::endl;
 	this->EnergyPoints--;
 	}

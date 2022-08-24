@@ -2,11 +2,11 @@
 
 int	main()
 {
-	ClapTrap	a("Canodis");
+	ClapTrap	a;
 
 	a.attack("Zoro");
 	a.takeDamage(5);
 	a.beRepaired(10);
-	a.takeDamage(15);
+	a.takeDamage(14);
 	std::cout << a;
 }
