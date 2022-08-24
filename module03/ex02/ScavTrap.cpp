@@ -1,15 +1,15 @@
 #include "ScavTrap.h"
 
 ScavTrap::ScavTrap(std::string _name, int _hp, int _energy, int _damage): ClapTrap(_name, _hp, _energy, _damage) {
-	std::cout << "ScavTrap\'s constructor called" << std::endl;
+	std::cout << BLUE << "ScavTrap\'s constructor called" << NORM << std::endl;
 }
 
 ScavTrap::~ScavTrap() {
-	std::cout << "ScavTrap\'s Destructer called" << std::endl;
+	std::cout << BLUE << "ScavTrap\'s Destructer called" << NORM << std::endl;
 }
 
 ScavTrap::ScavTrap(ScavTrap const &cpy): ClapTrap(cpy) {
-	std::cout << "ScavTrap\'s Copy constructor called" << std::endl;
+	std::cout << BLUE << "ScavTrap\'s Copy constructor called" << NORM <<std::endl;
 }
 
 void 	ScavTrap::guardGate() {
@@ -17,7 +17,7 @@ void 	ScavTrap::guardGate() {
 }
 
 ScavTrap	&ScavTrap::operator=(const ScavTrap &src) {
-	std::cout << "ScavTrap\'s Operator= called" << std::endl;
+	std::cout << BLUE << "ScavTrap\'s Operator= called" << NORM << std::endl;
 	this->Name = src.Name;
 	this->AttackDamage = src.AttackDamage;
 	this->EnergyPoints = src.EnergyPoints;

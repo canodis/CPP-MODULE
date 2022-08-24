@@ -2,7 +2,7 @@
 
 // ---- Constructors ---- // 
 ClapTrap::ClapTrap(std::string _name, int _hp, int _energy, int _damage) {
-	std::cout << "Multiple Constructor called" << std::endl;
+	std::cout << RED << "Base Constructor called" << NORM << std::endl;
 	this->Name = _name;
 	this->HitPoints = _hp;
 	this->EnergyPoints = _energy;
@@ -10,15 +10,20 @@ ClapTrap::ClapTrap(std::string _name, int _hp, int _energy, int _damage) {
 }
 
 ClapTrap::~ClapTrap() {
-	std::cout << "Desstructor called" << std::endl;
+	std::cout << RED << "Base Destructor called" << NORM << std::endl;
 }
 
-ClapTrap &ClapTrap::operator=(const ClapTrap src) {
-	std::cout << "Operator= called" << std::endl;
+ClapTrap::ClapTrap(const ClapTrap &cpy) {
+	std::cout << RED << "Base Copy called" << NORM << std::endl;
+	this->Name = cpy.Name;
+	this->AttackDamage = cpy.AttackDamage;
+	this->EnergyPoints = cpy.EnergyPoints;
+	this->HitPoints = cpy.EnergyPoints;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &src) {
+	std::cout << RED << "Base Operator= called" << NORM << std::endl;
 	this->Name = src.Name;
-	this->AttackDamage = src.AttackDamage;
-	this->EnergyPoints = src.EnergyPoints;
-	this->HitPoints = src.HitPoints;
 	return (*this);
 }
 
@@ -32,7 +37,7 @@ void	ClapTrap::attack(const std::string &target) {
 		std::cout << "Not enough energy !" << std::endl;
 	else
 	{
-	std::cout << "ClapTrap "+ this->Name + " attacks "+ target + " ,causing " 
+	std::cout << "ClapTrap "+ this->Name + " attacks "+ target + ", causing " 
 	+ std::to_string(this->AttackDamage) + " points of damage!" << std::endl;
 	this->EnergyPoints--;
 	}
