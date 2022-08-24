@@ -13,12 +13,12 @@ Fixed::Fixed(const int number) {
 
 Fixed::Fixed(const float fnumber) {
 	std::cout << "Float constructor called" << std::endl;
-	this->fixedPointValue = (int)(roundf(fnumber * (1 << this->bits)));
+	this->fixedPointValue = roundf(fnumber * (1 << this->bits));
 }
 
 Fixed::Fixed(const Fixed &copy) {
 	std::cout << "Copy constructor called" << std::endl;
-	*this = copy;
+	this->fixedPointValue = copy.getRawBits();
 }
 
 // ---- Destructors ---- //
@@ -59,7 +59,7 @@ bool	Fixed::operator!=(Fixed src) {
 	return (this->toFloat() != src.toFloat());
 }
 
-std::ostream	&operator<<(std::ostream &os, const Fixed f) {
+std::ostream	&operator<<(std::ostream &os, const Fixed &f) {
 	os << f.toFloat();
 	return os;
 }

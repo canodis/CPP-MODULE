@@ -8,7 +8,7 @@
             "type": "lldb",
             "request": "launch",
             "name": "Debug",
-            "program": "/Users/rtosun/Desktop/CPP-MODULE/module01/ex06/harl",
+            "program": "/Users/rtosun/Desktop/CPP-MODULE/module02/ex02/Orthodox3",
             "args": ["WARNING"],
             "cwd": "${workspaceFolder}"
         }
