@@ -15,7 +15,8 @@ int	main()
 	ft.highFivesGuys();
 	st.attack("can");
 	st.guardGate();
-	std::cout << ft << std::endl;
+	std::cout << ft;
+	std::cout << "-----------------" << std::endl;
 	std::cout << st;
 
 }
