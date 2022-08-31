@@ -1,8 +1,9 @@
 #ifndef ANIMAL_H
 # define ANIMAL_H
 
-#include <iostream>
-
+# include <iostream>
+# include "Brain.h"
+ 
 class Animal
 {
 protected:

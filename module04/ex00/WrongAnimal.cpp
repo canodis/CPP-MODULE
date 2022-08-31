@@ -1,6 +1,6 @@
 #include "WrongAnimal.h"
 
-WrongAnimal::WrongAnimal() {
+WrongAnimal::WrongAnimal(): type("Wrong Animal") {
 	std::cout << "WrongAnimal class's constructor called" << std::endl;
 }
 

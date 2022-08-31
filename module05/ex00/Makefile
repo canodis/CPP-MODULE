@@ -1,7 +1,7 @@
-NAME = animals
-CMP = c++
-FLAGS = #-Wall -Wextra -Werror
+NAME = burokrat
 SRCS = *.cpp
+CMP = c++
+FLAGS = -Wall -Wextra -Werror
 
 all:
 	$(CMP) $(FLAGS) $(SRCS) -o $(NAME)

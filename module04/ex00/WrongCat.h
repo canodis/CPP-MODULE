@@ -2,9 +2,8 @@
 # define WRONGCAT_H
 
 # include "WrongAnimal.h"
-# include "Animal.h"
 
-class WrongCat : public WrongAnimal, public Animal
+class WrongCat : public WrongAnimal
 {
 public:
 	WrongCat();
@@ -12,7 +11,7 @@ public:
 	WrongCat(const WrongCat &cpy);
 	WrongCat &operator=(const WrongCat &src);
 	void makeSound(void) const;
-	~WrongCat();
+	virtual ~WrongCat();
 };
 
 #endif

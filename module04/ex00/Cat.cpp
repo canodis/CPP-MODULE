@@ -10,10 +10,8 @@ Cat::Cat(const Cat &cpy): Animal(cpy) {
 
 Cat &Cat::operator=(const Cat &src) {
 	std::cout << "Cat class's operator= called" << std::endl;
-	if (this == &src)
-		return (*this);
-	this->type = src.type;
-	return (*this);
+	this->Animal::operator=(src);
+	return(*this);
 }
 
 Cat::~Cat() {

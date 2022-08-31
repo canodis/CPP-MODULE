@@ -1,11 +1,10 @@
 NAME = brain
 CMP = c++
-FLAGS = -Wall -Wextra -Werror
-INCDIR = inc
-SRCS = src/*.cpp
+FLAGS = #-Wall -Wextra -Werror
+SRCS = *.cpp
 
 all:
-	$(CMP) $(FLAGS) -I $(INCDIR) $(SRCS) -o $(NAME)
+	$(CMP) $(FLAGS) $(SRCS) -o $(NAME)
 
 clean:
 	rm -f $(NAME)
