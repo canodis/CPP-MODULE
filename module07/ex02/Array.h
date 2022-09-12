@@ -1,4 +1,32 @@
-#include "Array.hpp"
+#ifndef ARRAY_H
+# define ARRAY_H
+
+#include <iostream>
+
+template<typename T>
+class Array
+{
+	private:
+		T				*array;
+		unsigned int	len;
+	public:
+		Array();
+		Array(unsigned int length);
+		Array(const Array &oth);
+		~Array();
+
+		Array	&operator=(const Array &obj);
+		T		&operator[](unsigned int index);
+		const T	&operator[](unsigned int index) const;
+		unsigned int size() const;
+		class OutofBounds : public std::exception
+		{
+			virtual const char *what() const throw()
+			{
+				return ("ARRAYEXCEPTION: The Index is Out of Bounds");
+			}
+		};
+};
 
 template<typename T>
 Array<T>::Array()
@@ -41,9 +69,7 @@ Array<T>	&Array<T>::operator=(const Array &obj)
 	array = new T[obj.size()];
 	len = obj.size();
 	for (unsigned int i = 0; i < len; i++)
-	{
 		array[i] = obj[i];
-	}
 	return (*this);
 }
 
@@ -68,3 +94,5 @@ unsigned int Array<T>::size() const
 {
 	return len;
 }
+
+#endif
