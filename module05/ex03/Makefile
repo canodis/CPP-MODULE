@@ -1,4 +1,4 @@
-NAME = what
+NAME = intern
 SRCS = *.cpp
 CMP = c++
 FLAGS = -Wall -Wextra -Werror

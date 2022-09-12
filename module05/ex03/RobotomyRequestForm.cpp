@@ -30,3 +30,7 @@ void	RobotomyRequestForm::action() const {
 		std::cout << this->Target << " robotomy failed." << std::endl;
 	}
 }
+
+Form *RobotomyRequestForm::clone(std::string _target) {
+	return (new RobotomyRequestForm(_target));
+}

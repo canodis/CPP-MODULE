@@ -43,3 +43,7 @@ void	ShrubberyCreationForm::action() const{
 			   "                 {"
 			<< std::endl;
 }
+
+Form *ShrubberyCreationForm::clone(std::string _target) {
+	return (new ShrubberyCreationForm(_target));
+}

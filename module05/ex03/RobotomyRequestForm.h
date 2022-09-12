@@ -13,6 +13,7 @@ class RobotomyRequestForm: public Form
 		RobotomyRequestForm(const RobotomyRequestForm &obj);
 		~RobotomyRequestForm();
 		RobotomyRequestForm	&operator=(RobotomyRequestForm const &obj);
+		Form *clone(std:: string _target);
 		void	action() const;
 };
 

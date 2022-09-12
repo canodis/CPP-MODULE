@@ -19,12 +19,13 @@ public:
 	Form &operator=(const Form &src);
 	void	beSigned(Bureaucrat &bureaucrat);
 	virtual void action() const = 0;
-	 void	execute(Bureaucrat const &executor) const;
+	virtual Form *clone(std::string _target) = 0;
+	void	execute(Bureaucrat const &executor) const;
 	bool	getIsSigned() const;
 	std::string getName() const;
 	int	getSign() const;
 	int	getExecute() const;
-	~Form();
+	virtual ~Form();
 	
 	class GradeTooHighException : public std::exception {
 			public:

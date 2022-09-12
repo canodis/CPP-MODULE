@@ -13,6 +13,7 @@ class PresidentialPardonForm: public Form
 		PresidentialPardonForm(const PresidentialPardonForm &cpy);
 		PresidentialPardonForm	&operator=(PresidentialPardonForm const &src);
 		~PresidentialPardonForm();
+		Form *clone(std:: string _target);
 		void	action() const;
 };
 

@@ -23,3 +23,7 @@ PresidentialPardonForm &PresidentialPardonForm::operator=(PresidentialPardonForm
 void PresidentialPardonForm::action() const {
 	std::cout << this->Target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 }
+
+Form *PresidentialPardonForm::clone(std::string _target) {
+	return (new PresidentialPardonForm(_target));
+}

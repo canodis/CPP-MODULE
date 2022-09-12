@@ -14,6 +14,7 @@ class ShrubberyCreationForm: public Form
 		ShrubberyCreationForm(const ShrubberyCreationForm &obj);
 		ShrubberyCreationForm	&operator=(ShrubberyCreationForm const &obj);
 		~ShrubberyCreationForm();
+		Form *clone(std:: string _target);
 		void	action() const;
 };
 
