@@ -10,8 +10,8 @@ int	main()
 	{
 		std::cout << c << std::endl;
 		std::cout << e << std::endl;
-		c.decGrade(666);
-		e.incGrade(555);
+		c.decGrade(4);
+		e.incGrade(5);
 	}
 	catch (std::exception &e)
 	{

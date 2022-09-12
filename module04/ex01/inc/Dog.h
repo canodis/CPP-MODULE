@@ -2,6 +2,7 @@
 # define DOG_H
 
 # include "Animal.h"
+# include "Brain.h"
 
 class Dog : public Animal
 {

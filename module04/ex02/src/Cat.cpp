@@ -18,8 +18,8 @@ Cat &Cat::operator=(const Cat &src) {
 }
 
 Cat::~Cat() {
-	delete brain;
 	std::cout << "Cat class's destructor called" << std::endl;
+	delete brain;
 }
 
 void	Cat::makeSound(void) const {

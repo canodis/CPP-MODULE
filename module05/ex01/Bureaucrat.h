@@ -2,7 +2,6 @@
 # define BUREAUCRAT_H
 
 # include <iostream>
-class Bureaucrat;
 # include "Form.h"
 
 class Bureaucrat

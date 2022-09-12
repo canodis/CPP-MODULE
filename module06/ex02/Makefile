@@ -1,11 +1,10 @@
-NAME = branimals
+NAME = identify
+SRCS = *.cpp
 CMP = c++
 FLAGS = -Wall -Wextra -Werror
-INC = inc
-SRCS = src/*.cpp
 
 all:
-	$(CMP) $(FLAGS) $(SRCS) -I $(INC) -o $(NAME)
+	$(CMP) $(FLAGS) $(SRCS) -o $(NAME)
 
 clean:
 	rm -f $(NAME)

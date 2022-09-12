@@ -1,6 +1,7 @@
 #ifndef FORM_H
 # define FORM_H
 
+class Bureaucrat;
 # include <iostream>
 class Form;
 # include "Bureaucrat.h"

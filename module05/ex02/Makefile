@@ -1,14 +1,26 @@
-NAME = what
-SRCS = *.cpp
-CMP = c++
+NAME = a.out
+CC = c++ -std=c++98
 FLAGS = -Wall -Wextra -Werror
 
-all:
-	$(CMP) $(FLAGS) $(SRCS) -o $(NAME)
+SRC_DIR = ./
+SRC	= $(shell find $(SRC_DIR) -type f -name "*.cpp")
 
-clean:
-	rm -f $(NAME)
+OBJ = $(SRC:.cpp=.o)
 
-fclean : clean
+$(NAME): $(OBJ)
+	$(CC) $(FLAGS) -o $(NAME) $(OBJ)
+
+%.o	: %.cpp
+	$(CC) $(FLAGS) -o $@ -c $< 
+
+all: $(NAME)
+
+clean: 
+	rm -f $(OBJ)
+
+fclean: clean
+		rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re

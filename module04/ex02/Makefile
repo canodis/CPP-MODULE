@@ -1,4 +1,4 @@
-NAME = branimals
+NAME = abstract
 CMP = c++
 FLAGS = -Wall -Wextra -Werror
 INC = inc

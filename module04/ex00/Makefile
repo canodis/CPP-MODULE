@@ -1,10 +1,11 @@
 NAME = animals
 CMP = c++
-FLAGS = #-Wall -Wextra -Werror
-SRCS = *.cpp
+FLAGS = -Wall -Wextra -Werror
+INC = inc
+SRCS = src/*.cpp
 
 all:
-	$(CMP) $(FLAGS) $(SRCS) -o $(NAME)
+	$(CMP) $(FLAGS) $(SRCS) -I $(INC) -o $(NAME)
 
 clean:
 	rm -f $(NAME)

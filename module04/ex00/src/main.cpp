@@ -19,4 +19,5 @@ int main()
 	delete j;
 	delete i;
 	delete a;
+	system("leaks animals");
 }

@@ -2,7 +2,6 @@
 # define FORM_H
 
 # include <iostream>
-class Form;
 # include "Bureaucrat.h"
 
 class Form

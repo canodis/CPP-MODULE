@@ -1,6 +1,7 @@
 #ifndef CAT_H
 # define CAT_H
 
+# include "Brain.h"
 # include "Animal.h"
 
 class Cat : public Animal
