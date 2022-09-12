@@ -1,4 +1,4 @@
-NAME = template
+NAME = iter
 SRCS = *.cpp
 CMP = c++
 FLAGS = -Wall -Wextra -Werror

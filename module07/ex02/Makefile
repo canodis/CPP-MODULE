@@ -1,5 +1,5 @@
-NAME = template
-SRCS = *.cpp
+NAME = array
+SRCS = main.cpp
 CMP = c++
 FLAGS = -Wall -Wextra -Werror
 
