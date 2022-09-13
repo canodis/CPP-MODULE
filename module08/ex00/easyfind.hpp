@@ -6,11 +6,9 @@ class NotFound : public std::exception
 {
 public:
 	const char *what() const throw() {
-		return ("value is not in the conteiner !");
+		return ("Value is not in the conteiner !");
 	}
 };
-
-
 
 template<class T>
 typename T::iterator	easyfind(T &conteiner, int a) {

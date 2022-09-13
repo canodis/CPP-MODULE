@@ -4,7 +4,7 @@
 #include <list>
 int main()
 {
-	std::vector<int> _vec;
+	std::vector<int> _vec(5);
 	std::array<int ,5> _arr = {0,1,2,3,4};
 	std::list<int> _list;
 
@@ -20,7 +20,7 @@ int main()
 		std::cout << *easyfind(_vec, 5) << std::endl;
 		std::cout << *easyfind(_arr, 3) << std::endl;
 		std::cout << *easyfind(_vec, 4) << std::endl;
-		std::cout << *easyfind(_list, 15) << std::endl;
+		std::cout << *easyfind(_list, 7) << std::endl;
 	}
 	catch(const std::exception& e)
 	{
