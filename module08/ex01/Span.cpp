@@ -1,5 +1,6 @@
 #include "Span.h"
 #include <math.h>
+#include <climits>
 
 Span::Span() {
 }
