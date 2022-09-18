@@ -6,7 +6,7 @@ template <typename T>
 class MutantStack : public std::stack<T, std::vector<T> > {
 	public:
 		MutantStack() {};
-		MutantStack(MutantStack const & other):std::stack<T, std::vector<T>>(other) {};
+		MutantStack(MutantStack const & other):std::stack<T, std::vector<T> >(other) {};
 		~MutantStack() {
 			this->c.clear();
 		};

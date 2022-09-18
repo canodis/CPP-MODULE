@@ -1,26 +1,14 @@
 NAME = mutant
-CFLAGS = -Wall -Wextra -Werror
-RM = rm -rf
-CC = c++
+SRCS = *.cpp
+CMP = c++
+FLAGS = -Wall -Wextra -Werror
 
-SRCS = main.cpp
-OBJS = $(SRCS:.cpp=.o)
-
-all: $(NAME)
-
-$(NAME): $(OBJS)
-	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
-
-%.o:%.cpp MutantStack.hpp
-	@$(CC) $(CFLAGS) -c $< -o $@
-	@echo "compiling..."
+all:
+	$(CMP) $(FLAGS) $(SRCS) -o $(NAME)
 
 clean:
-	@$(RM) $(OBJS)
-	@echo "successfuly cleaned"
+	rm -f $(NAME)
 
-fclean: clean
-	@$(RM) $(NAME)
-	@echo "executable removed successfuly"
+fclean : clean
 
 re: fclean all
